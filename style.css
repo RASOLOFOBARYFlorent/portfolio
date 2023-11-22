@@ -1,0 +1,536 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bgcolor:#0d0f0c;
+    --headcolor:#09545E;
+    --yellow:#e7bf0d;
+    --linkcolor: #f2f2f2;
+    --footercolor:#09545e;
+    --colorspan:#0606f9;
+    --service:#101b20;
+    --speccolor:#080808;
+    --formcolor:rgb(79, 29, 88);
+}
+body{
+    background-color: var(--bgcolor);
+}
+.lineseparator{
+    width: 90%;
+    margin: 10px auto;
+    border-bottom: 3px solid var(--headcolor);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: var(--headcolor);
+}
+.header .liens{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right:0;
+}
+.header .liens ul{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.header .liens #img{
+    width: 25px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.header .liens ul li{
+    list-style: none;
+
+}
+
+.header .liens ul li a:hover{
+    color: var(--yellow);
+    
+}
+.header .liens ul li a{
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    
+}
+.header .liens ul li a img{
+    width: 30px;
+}
+.header .liens ul li a #me{
+    border-radius: 50%;
+}
+/* home default style */
+.default{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem auto;
+    align-items: center;
+}
+.default .home{
+    display: flex;
+    flex-direction: column;
+    color: var(--linkcolor);
+    gap: 15px;
+    margin: 1rem auto;
+}
+.default .defaultleft img{
+    max-width: 300px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.default .defaultmiddle {
+    align-items: center;
+    justify-content: center;
+}
+.default .defaultmiddle h3 span{
+   color: var(--colorspan);
+}
+.default .defaultmiddle h3{
+    text-align: center;
+}
+
+.default .defaultright .watch{
+    width: 290px;
+    height: 290px;
+    background-color: rgba(255, 0, 0, 0.096);
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+}
+.default .defaultright .watch .fleche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+}
+.default .defaultright .watch .fleche{
+    display: flex;
+    position: relative;
+    
+}
+.default .defaultright .watch .fleche .fl{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+.default .defaultright .watch .fleche .fl span{
+    position: absolute;
+    width: var(--w);
+    height: var(--l);
+    background-color: var(--c);
+    border-radius: 50%;
+}
+
+.default .defaultright .watch ul{
+    position: relative;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.default .defaultright .watch ul li{
+  transform:rotate(calc(var(--i)*30deg));
+  list-style: none;
+  inset: 1px;
+  font-size: 25px;
+  position: absolute;
+  text-align: center;
+  max-width: 40%;
+  margin: 0 auto;
+}
+.default .defaultright .watch ul li span{
+    transform:rotate(calc(-30deg*var(--i)));
+    display: inline-block;
+  }
+
+  .default .defaultright .watch:after{
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: rgb(221, 221, 235);
+      position: absolute;
+      top: 48%;
+      left: 48%;
+      border-radius: 50%;
+  }
+
+ /* A propos de RASOLOFOBARY Florent */
+
+ #apropos{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     width: 100%;
+ }
+ #apropos .aproposcontainer{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: 1rem 0;
+     color: var(--linkcolor);
+     gap: 2rem;
+     align-items: center;
+     
+ }
+ #apropos .aproposcontainer .imageaveccv{
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+ }
+ #apropos .aproposcontainer img{
+     border-radius: 10px;
+     height: 300px;
+ }
+ #apropos .aproposcontainer .biography{
+     display: flex;
+     flex-direction: column;
+     gap: 25px;
+ }
+ #apropos .aproposcontainer .biography .title{
+     text-transform: uppercase;
+ }
+
+ #apropos .aproposcontainer .biography .specialite{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
+      max-width: 500px;
+      margin-bottom: 1rem;
+  }
+  #apropos .aproposcontainer .biography .specialite .spec{
+      width: 100px;
+      height: 100px;
+      gap: 1rem;
+      background: conic-gradient(var(--bgcolor) calc(var(--cont)*1deg), blue 0deg);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #0606f9;
+      flex-wrap: wrap;
+      position: relative;
+  }
+  #apropos .aproposcontainer .biography .specialite .html h2,#apropos .aproposcontainer .biography .specialite .css h2,
+  #apropos .aproposcontainer .biography .specialite .javascript h2,  #apropos .aproposcontainer .biography .specialite .php h2,
+  #apropos .aproposcontainer .biography .specialite .qgis h2,#apropos .aproposcontainer .biography .specialite .basededonnerel h2,
+  #apropos .aproposcontainer .biography .specialite .physiqueapplique h2{
+      position: absolute;
+      bottom: -40px;
+  }
+
+  #apropos .aproposcontainer .biography .specialite .spec .cont{
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bgcolor);
+      border-radius: 50%;
+      border: 1px solid #0606f9;
+  }
+  #apropos .aproposcontainer .biography .specialite .spec .cont h1{
+      font-size: 15px;
+      
+  }
+  #apropos .aproposcontainer .biography h2{
+      font-size: 20px;
+  }
+  #apropos .aproposcontainer .biography h2 span{
+      color:#0606f9;
+  }
+  #apropos a{
+      width: 200px;
+      text-decoration: none;
+      background-color:var(--colorspan);
+      padding: 5px;
+      margin: 1rem auto;
+      color:var(--linkcolor);
+      border-radius: 5px;
+  }
+  #apropos a:hover{
+      box-shadow: 2px 2px 30px var(--colorspan);
+  }
+
+  /* services */
+#services{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+}
+#services h1,#services h2{
+    color: var(--linkcolor);
+}
+#services p{
+    color: #f0f0f0ab;
+}
+
+#services .services{
+    display: flex;
+    flex-direction: column;
+}
+#services .services #titleservice{
+    color: var(--linkcolor);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+#services .services .contservice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#services .services .contservice .service{
+    display: flex;
+    height: 300px;
+    max-width: 310px;
+    flex-direction: column;
+    background-color: var(--service);
+    border-radius: 10px;
+    text-align: center;
+}
+#services .services .contservice .service a{
+    width: 120px;
+    text-decoration: none;
+    background-color:var(--colorspan);
+    padding: 4px;
+    margin-top:  auto;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    color:var(--linkcolor);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#services .services .contservice .service a:hover{
+    box-shadow: 2px 2px 30px var(--colorspan);
+}
+#services .services .contservice .service a img{
+    width: 25px;
+}
+
+#services .educations{
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+}
+
+#services .educations #titleeducation{
+    color: var(--linkcolor);
+    text-align: center;
+    margin-top: 1rem;
+}
+#services .educations .conteduc{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#services .educations .conteduc .education{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--service);
+    height: 300px;
+    margin-top: 2rem;
+    max-width: 300px;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+
+/* mes contacts */
+#contact{
+    display: flex;
+    flex-direction: column;
+
+}
+#contact #contactme{
+    color: var(--linkcolor);
+    text-align: center;
+}
+#contact .formulaire{
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+#contact .formulaire form{
+    display: flex;
+    flex-direction: column;
+}
+#contact .formulaire form input{
+    padding: 5px;
+    border-radius: 5px;
+}
+#contact .formulaire form .mainform{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    background-color: var(--formcolor);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#contact .formulaire form .mainform .nomemail{
+    display: flex;
+    gap: 20px;
+    color: var(--linkcolor);
+}
+
+#contact .formulaire form .mainform input,#contact .formulaire form .mainform textarea{
+    background: #051adb;
+    color: var(--linkcolor);
+}
+#contact .formulaire form .mainform textarea{
+    border-radius: 10px;
+}
+#contact .formulaire form .mainform .nomemail input{
+    width: 50%;
+}
+#contact .formulaire form input[type='submit']{
+    width: 50%;
+    margin: auto;
+    background: #062dd8be;
+    color: var(--linkcolor);
+    border: none;
+    cursor: pointer;
+}
+#contact .formulaire form input[type='submit']:hover{
+    box-shadow: 2px 2px 20px #fff;
+}
+#contact .moncontact{
+    display: flex;
+    color: var(--linkcolor);
+    gap: 1rem;
+    flex-direction: column;
+  }
+  #contact .moncontact #h1{
+      text-align: center;
+  }
+  #contact .moncontact .mescontacts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #contact .moncontact .mescontacts .container{
+      max-width: 310px;
+      border: 1px solid var(--linkcolor);
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem auto;
+  }
+  #contact .moncontact .mescontacts .container img{
+      width: 50px;
+      
+  }
+  #contact .moncontact .mescontacts .container h2{
+      font-size: 15px;
+  }
+/* footer style */
+
+.footer{
+    background-color: var(--footercolor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer .ft{
+    display: flex;
+    flex-direction: column; 
+     
+}
+.footer .ft h1{
+    color: var(--linkcolor);
+}
+.footer .ft ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}
+.footer .ft ul img{
+    width: 25px;
+    border-radius: 50%;
+}
+.footer .ft ul li{
+    list-style: none;
+}
+.footer .ft ul li a{
+    display: flex;
+    gap: 1rem;
+    color: var(--linkcolor);
+    text-decoration: none;
+}
+.footer .ft ul li a:hover {
+    color: var(--yellow);
+}
+
+
+
+/* responsive */
+@media screen and (max-width:400px){
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 15px;
+    }
+    .header .liens{
+        justify-content: center;
+    }
+    .header .liens ul{
+        margin-top: 150px;
+        background-color: #f1f1f1;
+        border-radius: 6px;
+        visibility: hidden;
+        flex-direction: column;
+    }  
+    .header .liens #img{
+        visibility: visible;
+    }
+    .header .liens:hover ul{
+        visibility: visible;
+        z-index: 100;
+    }
+    .header .liens ul li{
+        margin: auto;
+    }
+    .header .liens ul li a{
+        color: black;
+    }
+
+
+
+    .footer{
+        justify-content: center;
+    }
+}
